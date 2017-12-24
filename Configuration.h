@@ -524,7 +524,7 @@
 
   // height from z=0 to home position
   // increase height to 313.42 / 312.73
-  #define DELTA_HEIGHT 312.59 
+  #define DELTA_HEIGHT 314.64 
   
   #define DELTA_ENDSTOP_ADJ { -2.79, -3.02, 0.0 } // get these from auto calibrate
 
@@ -535,7 +535,8 @@
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 2.42, -0.8, -1.62 } // get these values from auto calibrate
+  //#define DELTA_TOWER_ANGLE_TRIM { 2.42, -0.8, -1.62 } // get these values from auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 0, 0, 0 } // get these values from auto calibrate
 
   // delta radius and diaginal rod adjustments measured in mm
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -614,7 +615,7 @@
  */
 // update after doing stepper calibrations
 // https://github.com/FLSun3dp/FLSun-Kossel-Mini/wiki/02.-Calibrate-your-printer
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 101.01, 100, 102.564, 100 }  // default steps per unit for Kossel (GT2, 20 tooth)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 101.01, 100, 101.523, 100 }  // default steps per unit for Kossel (GT2, 20 tooth)
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1005,7 +1006,7 @@
  *   With an LCD controller the process is guided step-by-step.
  */
 //#define AUTO_BED_LEVELING_3POINT
-//#define AUTO_BED_LEVELING_LINEAR
+#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
