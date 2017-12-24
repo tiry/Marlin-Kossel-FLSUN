@@ -510,7 +510,8 @@
 
   #if ENABLED(DELTA_AUTO_CALIBRATION) || ENABLED(DELTA_CALIBRATION_MENU)
     // Set the radius for the calibration probe points - max 0.9 * DELTA_PRINTABLE_RADIUS for non-eccentric probes
-    #define DELTA_CALIBRATION_RADIUS 73.5 // mm
+    //#define DELTA_CALIBRATION_RADIUS 73.5 // mm
+    #define DELTA_CALIBRATION_RADIUS 68.5 // mm
     // Set the steprate for papertest probing
     #define PROBE_MANUALLY_STEP 0.025
   #endif
@@ -522,12 +523,14 @@
   #define DELTA_DIAGONAL_ROD 218.0 // mm
 
   // height from z=0 to home position
-  #define DELTA_HEIGHT 295.00 // get this value from auto calibrate
-
-  #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // get these from auto calibrate
+  // increase height to 313.42 / 312.73
+  #define DELTA_HEIGHT 312.64 
+  
+  #define DELTA_ENDSTOP_ADJ { -0.42, -2.05, 0.0 } // get these from auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 101.0 //mm  Get this value from auto calibrate
+  // limit radius to avoid issue during g33 autocalibration
+  #define DELTA_RADIUS 97.60 //mm  Get this value from auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
@@ -609,7 +612,9 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 100, 100 }  // default steps per unit for Kossel (GT2, 20 tooth)
+// update after doing stepper calibrations
+// https://github.com/FLSun3dp/FLSun-Kossel-Mini/wiki/02.-Calibrate-your-printer
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 101.01, 100, 102.564, 100 }  // default steps per unit for Kossel (GT2, 20 tooth)
 
 /**
  * Default Max Feed Rate (mm/s)
