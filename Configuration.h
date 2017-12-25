@@ -523,17 +523,17 @@
   #define DELTA_DIAGONAL_ROD 218.0 // mm
 
   // height from z=0 to home position
-  #define DELTA_HEIGHT 314.13 // get this value from auto calibrate
+  #define DELTA_HEIGHT 314.30 // get this value from auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -4.81, 0.0, -3.36 } // get these from auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -4.82, 0.0, -3.22 } // get these from auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 101.78 //mm  Get this value from auto calibrate
+  #define DELTA_RADIUS 102.36 //mm  Get this value from auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 1.08, -1.50, 0.42 } // get these values from auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 0.93, -1.61, 0.68 } // get these values from auto calibrate
 
   // delta radius and diaginal rod adjustments measured in mm
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
